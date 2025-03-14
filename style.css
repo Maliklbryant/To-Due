@@ -155,21 +155,38 @@ input[type="checkbox"]:checked ~ .todo-text{
 input[type="checkbox"]{
     display: none;
 }
-@media(max-width: 500px){
-    html{
+/* Mobile Styles for Add Button */
+@media (max-width: 500px) {
+    html {
         font-size: 12pt;
     }
-    #add-button{
-        position: unset;
-        width: 100%;
-        margin-top: 10px;
-        padding: 15px;
-        height: auto;
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
-    h1{
+
+    #todo-input {
+        width: 100%;
+        padding: 12px 15px;
+    }
+
+    #add-button {
+        position: relative; /* Removes absolute positioning */
+        width: 100%; /* Makes the button full width */
+        margin-top: 10px; /* Adds spacing below input */
+        padding: 12px; /* Increases padding for better tap */
+        font-size: 16px;
+        height: auto;
+        text-align: center;
+    }
+
+    h1 {
         margin-top: 50px;
         font-size: 15vw;
     }
 }
+
 
 
